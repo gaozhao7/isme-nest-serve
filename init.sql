@@ -73,7 +73,7 @@ CREATE TABLE `profile`  (
 -- ----------------------------
 -- Records of profile
 -- ----------------------------
-INSERT INTO `profile` VALUES (1, NULL, 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80', NULL, NULL, 1, 'Admin');
+INSERT INTO `profile` VALUES (1, NULL, 'https://easyimage.lovelala.top:14443/i/2023/01/05/sdf82x-2.jpeg', NULL, NULL, 1, 'Admin');
 
 -- ----------------------------
 -- Table structure for role

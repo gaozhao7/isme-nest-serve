@@ -25,6 +25,7 @@ import { createClient } from 'redis';
       useFactory: (configService: ConfigService) => {
         return {
           type: 'mysql',
+          logging: true,
           autoLoadEntities: true,
           host: process.env.DB_HOST || configService.get('DB_HOST'),
           port: +process.env.DB_PORT || configService.get('DB_PORT'),

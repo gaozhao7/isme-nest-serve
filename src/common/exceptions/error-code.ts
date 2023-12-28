@@ -30,3 +30,8 @@ export const ERR_20003 = '已超出支持的最大处理数量';
 
 // 环境相关
 export const ERR_30001 = '预览环境不支持此操作';
+
+
+// 字典模块相关
+export const ERR_40001 = '字典类型数据已存在';
+export const ERR_40002 = '字典类型数据不存在';
