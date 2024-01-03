@@ -24,7 +24,7 @@ export class CreateDictDataDto {
     @IsOptional()
     dictsort: number;
 
-    @IsString()
+    @IsOptional()
     listclass: string;
 
     @IsBoolean()

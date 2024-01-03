@@ -9,3 +9,5 @@
 export const USER_ACCESS_TOKEN_KEY = 'user_access_token';
 
 export const ACCESS_TOKEN_EXPIRATION_TIME = 3600 * 24 * 3;
+
+export const SYS_DICT_KEY = "trade_sys_dict:";

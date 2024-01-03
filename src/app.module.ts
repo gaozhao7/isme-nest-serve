@@ -44,7 +44,6 @@ import { LoggerMiddleware } from './common/middleware/logger.middleware';
     RoleModule,
     AuthModule,
     SysdictModule,
-
     SharedModule,
   ],
 })

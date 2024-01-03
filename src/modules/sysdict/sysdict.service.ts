@@ -149,4 +149,23 @@ export class SysdictService {
     await this.dictDataRepo.delete(id);
     return true;
   }
+
+  /**
+   * 缓存使用
+   * @returns 所有生效字典数据
+   */
+  async findAllSysDict(): Promise<SysDict[]> {
+    const data = this.sysDictRep.find({
+      relations: {
+        dictDatas: true,
+      },
+      where: {
+        status: true,
+      },
+      order: {
+        createTime: 'DESC',
+      },
+    });
+    return data;
+  }
 }

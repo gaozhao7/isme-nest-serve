@@ -3,10 +3,25 @@ import { SysdictService } from './sysdict.service';
 import { CreateSysdictDto } from './dto/create-sysdict.dto';
 import { UpdateSysdictDto } from './dto/update-sysdict.dto';
 import { GetSysDictDto } from './dto/query-sysdict.dto';
+import { RedisService } from '@/shared/redis.service';
+
 
 @Controller('sysdict')
 export class SysdictController {
-  constructor(private readonly sysdictService: SysdictService) {}
+  constructor(private readonly sysdictService: SysdictService,
+    private readonly redisService: RedisService) { }
+
+
+  @Get('getCache')
+  getCacheDictData(@Query() query: GetSysDictDto) {
+    return this.redisService.getSysDict(query.dictcode);
+  }
+
+  @Get('restCache')
+  async restCacheDict() {
+    const sysDictData = await this.sysdictService.findAllSysDict();
+    return this.redisService.resetDictCache(sysDictData);
+  }
 
   @Post()
   create(@Body() createSysdictDto: CreateSysdictDto) {
@@ -33,5 +48,5 @@ export class SysdictController {
     return this.sysdictService.remove(+id);
   }
 
-  
+
 }

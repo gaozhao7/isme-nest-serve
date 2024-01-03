@@ -6,6 +6,8 @@ import { SysDict } from './entities/sysdict.entity';
 import { DictData } from './entities/dictdata.entity';
 import { DictDataController } from './dictdata.controller';
 
+
+
 @Module({
   imports: [TypeOrmModule.forFeature([SysDict, DictData])],
   controllers: [SysdictController, DictDataController],

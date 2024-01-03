@@ -4,9 +4,10 @@ import { CreateDictDataDto } from './dto/create-dictdata.dto';
 import { GetSysDictDto } from './dto/query-sysdict.dto';
 import { UpdateDictDataDto } from './dto/update-dictdata.dto';
 
+
 @Controller('dictdata')
 export class DictDataController {
-  constructor(private readonly sysdictService: SysdictService) {}
+  constructor(private readonly sysdictService: SysdictService) { }
 
   // 字典值相关接口
   @Get()
@@ -35,5 +36,5 @@ export class DictDataController {
     return this.sysdictService.removeDictData(+id);
   }
 
-  
+
 }

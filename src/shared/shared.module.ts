@@ -17,6 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { RedisService } from './redis.service';
 import { createClient } from 'redis';
 
+
 @Global()
 @Module({
   imports: [
